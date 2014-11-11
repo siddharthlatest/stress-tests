@@ -11,7 +11,7 @@ class UserBehavior(TaskSet):
         self.client.put("/child1/.json", '{"property1": "value1", "property2":"value2", "property3": "value3"}')
 
     @task(1)
-    def put(self):
+    def patch(self):
         self.client.patch("/child1/.json", '{"property1": "new_value1", "property2":"new_value2"}')
 
     @task(1)
