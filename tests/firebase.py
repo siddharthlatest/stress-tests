@@ -1,9 +1,7 @@
 from locust import HttpLocust, TaskSet, task
 
 class UserBehavior(TaskSet):
-    def on_start(self):
-        """ on_start is called when a Locust start before any task is scheduled """
-
+    # @task(weight), weight defines the weight of the task.
     @task(1)
     def get(self):
         self.client.get("/.json")
@@ -24,9 +22,11 @@ class UserBehavior(TaskSet):
     def delete(self):
         self.client.delete("/.json")
 
-
 class WebsiteUser(HttpLocust):
+    # base host
     host = "https://fire-suck.firebaseio.com"
     task_set = UserBehavior
-    min_wait = 5000
-    max_wait = 9000
+
+    # Waiting before consecutive requests
+    min_wait = 2000
+    max_wait = 4000
