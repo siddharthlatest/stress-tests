@@ -16,3 +16,7 @@
 platform = firebase/parse/appbase
 
 Goto _ip:8089_.
+
+## Files
+
+Key for syncing the folder with bitsync: A4FGI2RAKLQWLJZ3C7N23B2L4LDFUTOIZ
