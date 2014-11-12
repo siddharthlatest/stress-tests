@@ -7,8 +7,9 @@
 `./installation/with_yum.sh` or `./installation/with_apt.sh`
 
 ## Testing
-
-`locust -f ./tests/<platform>.py`
+`chmod +x ./start`
+`chmod +x ./stop`
+`./start <platform>`
 
 platform = firebase/parse/appbase
 

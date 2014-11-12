@@ -15,14 +15,14 @@ class tasks(TaskSet):
         self.client.patch( self.URL + "/~properties", 
                            '{"data": {"property1": "value1", "property2":"value2", "property3": "value3"}, "secret": "aaf7c4cf139253df02cc23b5f67c076f"}',
                            headers = { 'Content-Type': 'application/json'},
-                           name = "patch at level:" + str(self.atLevel)
+                           name = "patch properties at level:" + str(self.atLevel)
                          )
     @task(1)
     def setEdge(self):
         self.client.patch( self.URL + "/~edges", 
                            '{"data":  {"test_edge":{"path":"testing/l1", "order": null}}, "secret": "aaf7c4cf139253df02cc23b5f67c076f"}',
                            headers = { 'Content-Type': 'application/json'},
-                           name = "set at level:" + str(self.atLevel)
+                           name = "set edge at level:" + str(self.atLevel)
                          )
 
 class WebsiteUser(HttpLocust):
