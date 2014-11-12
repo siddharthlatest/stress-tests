@@ -8,7 +8,9 @@
 
 ## Testing
 `chmod +x ./start`
+
 `chmod +x ./stop`
+
 `./start <platform>`
 
 platform = firebase/parse/appbase
