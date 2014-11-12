@@ -13,4 +13,4 @@
 
 platform = firebase/parse/appbase
 
-Goto _localhost:8089_.
+Goto _ip:8089_.
