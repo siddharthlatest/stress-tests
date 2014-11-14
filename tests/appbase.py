@@ -31,5 +31,5 @@ class WebsiteUser(HttpLocust):
     task_set = tasks
 
     # Waiting before consecutive requests
-    min_wait = 100
-    max_wait = 5000
+    min_wait = 2000
+    max_wait = 10000

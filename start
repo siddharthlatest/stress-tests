@@ -1,6 +1,6 @@
 killall locust
 echo Starting...
-if [ "$1" == "firebase" ] || ["$1" == "appbase"] || ["$1" == "parse"]; then
+if [ "$1" == "firebase" ] || [ "$1" == "appbase" ] || [ "$1" == "parse" ]; then
 	mkdir log
 	echo `nproc` slaves.
     	echo Logs at ./log. Check for interface at :8089, if not up, check master.log.
